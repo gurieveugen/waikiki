@@ -1,13 +1,6 @@
 <?php
-/**
- * The Header template for our theme
- *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
- */
+$options = \__::getOptions(array('gc_c_phone', 'gc_c_email'));
+extract($options);
 ?><!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -40,8 +33,8 @@
 	  <header id="header" class="cf">
 		  <h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			<div class="contact-header">
-			  <p class="phone">Contact reception: 08 9321 4321</p>
-				<p class="email"><a href="mailto:info@waikikihospital.com.au">info@waikikihospital.com.au</a></p>
+			  <p class="phone">Contact reception: <?php echo $gc_c_phone; ?></p>
+				<p class="email"><a href="mailto:<?php echo $gc_c_email; ?>"><?php echo $gc_c_email; ?></a></p>
 			</div>
 			
 			<nav class="main-menu cf">

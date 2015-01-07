@@ -11,8 +11,10 @@
  * @since Twenty Thirteen 1.0
  */
 
-if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
-<aside class="sidebar-list cf">
-	<?php dynamic_sidebar( 'main-sidebar' ); ?>
-</aside>
+if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
+<div id="secondary" class="sidebar-container" role="complementary">
+		<div class="widget-area">
+	<?php dynamic_sidebar( 'blog-sidebar' ); ?>
+	</div>
+</div>
 <?php endif; ?>
